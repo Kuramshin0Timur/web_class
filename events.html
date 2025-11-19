@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музей современного искусства | События</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="site-header">
+        <div class="container">
+            <h1 class="logo">Музей современного искусства</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О музее</a></li>
+                    <li><a href="exhibitions.html">Экспозиции</a></li>
+                    <li><a href="events.html" class="active">События</a></li>
+                    <li><a href="education.html">Образовательные программы</a></li>
+                    <li><a href="visitors.html">Посетителям</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h2>События</h2>
+                <p>Экскурсии, лекции, мастер-классы и специальные мероприятия</p>
+            </div>
+        </section>
+
+        <section class="events-calendar">
+            <div class="container">
+                <h3>Календарь событий</h3>
+                
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Дата</th>
+                            <th>Время</th>
+                            <th>Событие</th>
+                            <th>Тип</th>
+                            <th>Место</th>
+                            <th>Регистрация</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25 марта</td>
+                            <td>18:00-19:30</td>
+                            <td>
+                                <strong>Экскурсия с куратором</strong><br>
+                                <em>"Грани реальности"</em>
+                            </td>
+                            <td>Экскурсия</td>
+                            <td>Зал 3</td>
+                            <td><button class="btn-small">Записаться</button></td>
+                        </tr>
+                        <tr>
+                            <td>28 марта</td>
+                            <td>15:00-17:00</td>
+                            <td>
+                                <strong>Мастер-класс</strong><br>
+                                <em>Цифровая живопись для начинающих</em>
+                            </td>
+                            <td>Мастер-класс</td>
+                            <td>Образовательный центр</td>
+                            <td><button class="btn-small">Записаться</button></td>
+                        </tr>
+                        <tr>
+                            <td>2 апреля</td>
+                            <td>19:00-20:30</td>
+                            <td>
+                                <strong>Лекция</strong><br>
+                                <em>"Искусство и технологии: новые горизонты"</em>
+                            </td>
+                            <td>Лекция</td>
+                            <td>Конференц-зал</td>
+                            <td><button class="btn-small">Записаться</button></td>
+                        </tr>
+                        <tr>
+                            <td>5 апреля</td>
+                            <td>17:00-19:00</td>
+                            <td>
+                                <strong>Кинопоказ</strong><br>
+                                <em>Документальное кино о современном искусстве</em>
+                            </td>
+                            <td>Кинопоказ</td>
+                            <td>Кинозал</td>
+                            <td><button class="btn-small">Записаться</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="featured-events">
+            <div class="container">
+                <h3>Особые события</h3>
+                
+                <div class="featured-grid">
+                    <article class="featured-event">
+                        <div class="event-media">
+                            <!-- Видео элемент HTML5 -->
+                            <video controls poster="images/lecture-poster.jpg">
+                                <source src="media/artist-lecture.mp4" type="video/mp4">
+                                Ваш браузер не поддерживает видео элемент.
+                            </video>
+                        </div>
+                        <div class="event-info">
+                            <h4>Цикл лекций "Художники о искусстве"</h4>
+                            <p class="event-date">Каждую субботу в 17:00</p>
+                            <p>Встречи с современными художниками, которые рассказывают о своем творчестве, вдохновении и процессе создания работ.</p>
+                            
+                            <div class="event-details">
+                                <p><strong>Ближайшие лекции:</strong></p>
+                                <ul>
+                                    <li>1 апреля - Иван Петров: "Цифровые миры"</li>
+                                    <li>8 апреля - Ольга Сидорова: "Цвет и эмоция"</li>
+                                    <li>15 апреля - Алексей Козлов: "Материя и форма"</li>
+                                </ul>
+                            </div>
+                            
+                            <a href="#" class="btn">Узнать больше</a>
+                        </div>
+                    </article>
+
+                    <article class="featured-event">
+                        <div class="event-media">
+                            <!-- Аудио элемент HTML5 -->
+                            <audio controls>
+                                <source src="media/curator-interview.mp3" type="audio/mpeg">
+                                Ваш браузер не поддерживает аудио элемент.
+                            </audio>
+                            <p class="audio-caption">Интервью с куратором выставки "Грани реальности"</p>
+                        </div>
+                        <div class="event-info">
+                            <h4>Ночь в музее 2023</h4>
+                            <p class="event-date">20 мая, 18:00 - 02:00</p>
+                            <p>Ежегодная специальная программа "Ночи в музее" с эксклюзивными экскурсиями, перформансами и интерактивными инсталляциями.</p>
+                            
+                            <div class="event-highlights">
+                                <p><strong>Основные мероприятия:</strong></p>
+                                <ol>
+                                    <li>Световое шоу на фасаде музея</li>
+                                    <li>Живые перформансы в залах</li>
+                                    <li>Ночные экскурсии с фонариками</li>
+                                    <li>Интерактивные VR-инсталляции</li>
+                                </ol>
+                            </div>
+                            
+                            <a href="#" class="btn">Узнать больше</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="event-categories">
+            <div class="container">
+                <h3>Категории событий</h3>
+                
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <h4>Экскурсии</h4>
+                        <p>Обзорные и тематические экскурсии по выставкам с опытными гидами и кураторами.</p>
+                        <ul>
+                            <li>Обзорные экскурсии</li>
+                            <li>Тематические туры</li>
+                            <li>Экскурсии с куратором</li>
+                            <li>Аудиогиды</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="category-card">
+                        <h4>Образовательные программы</h4>
+                        <p>Лекции, семинары и курсы для углубленного изучения современного искусства.</p>
+                        <ul>
+                            <li>Лекционные циклы</li>
+                            <li>Семинары</li>
+                            <li>Курсы для взрослых</li>
+                            <li>Профессиональные воркшопы</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="category-card">
+                        <h4>Мастер-классы</h4>
+                        <p>Практические занятия под руководством художников и специалистов.</p>
+                        <ul>
+                            <li>Живопись и графика</li>
+                            <li>Цифровое искусство</li>
+                            <li>Скульптура</li>
+                            <li>Фотография</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="category-card">
+                        <h4>Специальные мероприятия</h4>
+                        <p>Концерты, кинопоказы, перформансы и другие культурные события.</p>
+                        <ul>
+                            <li>Концерты</li>
+                            <li>Кинопоказы</li>
+                            <li>Перформансы</li>
+                            <li>Творческие вечера</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <address>
+                        <p>г. Москва, ул. Современного искусства, 15</p>
+                        <p>Телефон: +7 (495) 123-45-67</p>
+                        <p>Email: info@modernartmuseum.ru</p>
+                    </address>
+                </div>
+                <div class="footer-section">
+                    <h3>Часы работы</h3>
+                    <ul>
+                        <li>Пн: выходной</li>
+                        <li>Вт-Вс: 11:00 - 20:00</li>
+                        <li>Чт: 11:00 - 21:00</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Подписка на события</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn-small">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Музей современного искусства. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

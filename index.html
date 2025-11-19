@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Мета-информация о документе -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Музей современного искусства - место встречи с искусством XXI века">
+    <meta name="keywords" content="музей, искусство, выставки, современное искусство">
+    
+    <!-- Заголовок документа -->
+    <title>Музей современного искусства | Главная</title>
+    
+    <!-- Подключение внешней таблицы стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка сайта - семантический тег HTML5 -->
+    <header id="site-header">
+        <div class="container">
+            <!-- Заголовок первого уровня -->
+            <h1 class="logo">Музей современного искусства</h1>
+            
+            <!-- Навигация - семантический тег HTML5 -->
+            <nav class="main-nav">
+                <!-- Нумерованный список -->
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О музее</a></li>
+                    <li><a href="exhibitions.html">Экспозиции</a></li>
+                    <li><a href="events.html">События</a></li>
+                    <li><a href="education.html">Образовательные программы</a></li>
+                    <li><a href="visitors.html">Посетителям</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое - семантический тег HTML5 -->
+    <main class="main-content">
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="container">
+                <!-- Заголовок второго уровня -->
+                <h2>Искусство, которое говорит с современностью</h2>
+                
+                <!-- Абзац текста -->
+                <p>Откройте для себя мир современного искусства в нашем музее</p>
+                
+                <!-- Ссылка-кнопка -->
+                <a href="#current-exhibitions" class="btn">Текущие выставки</a>
+            </div>
+        </section>
+
+        <!-- Секция текущих выставок -->
+        <section id="current-exhibitions" class="exhibitions">
+            <div class="container">
+                <h2>Текущие выставки</h2>
+                
+                <!-- Контейнер для карточек выставок -->
+                <div class="exhibition-grid">
+                    
+                    <!-- Статья о выставке - семантический тег HTML5 -->
+                    <article class="exhibition-card">
+                        <!-- Изображение -->
+                        <img src="images/exhibition1.jpg" alt="Выставка 'Грани реальности'">
+                        
+                        <!-- Заголовок третьего уровня -->
+                        <h3>Грани реальности</h3>
+                        
+                        <!-- Абзац текста -->
+                        <p>Исследуйте границы между реальным и виртуальным мирами через работы современных художников.</p>
+                        
+                        <!-- Абзац с физическим форматированием -->
+                        <p class="dates"><strong>15 января - 20 марта 2023</strong></p>
+                    </article>
+                    
+                    <article class="exhibition-card">
+                        <img src="images/exhibition2.jpg" alt="Выставка 'Цифровая эстетика'">
+                        <h3>Цифровая эстетика</h3>
+                        <p>Искусство в эпоху цифровых технологий: от алгоритмической графики до интерактивных инсталляций.</p>
+                        <p class="dates"><strong>10 февраля - 15 апреля 2023</strong></p>
+                    </article>
+                    
+                    <article class="exhibition-card">
+                        <img src="images/exhibition3.jpg" alt="Выставка 'Будущее здесь'">
+                        <h3>Будущее здесь</h3>
+                        <p>Художественное осмысление технологического прогресса и его влияния на человечество.</p>
+                        <p class="dates"><strong>5 марта - 10 мая 2023</strong></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция событий -->
+        <section class="events">
+            <div class="container">
+                <h2>Ближайшие события</h2>
+                
+                <!-- Таблица -->
+                <table class="events-table">
+                    <thead>
+                        <tr>
+                            <th>Дата</th>
+                            <th>Событие</th>
+                            <th>Время</th>
+                            <th>Место</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25 марта</td>
+                            <td>Экскурсия с куратором: "Грани реальности"</td>
+                            <td>18:00</td>
+                            <td>Зал 3</td>
+                        </tr>
+                        <tr>
+                            <td>28 марта</td>
+                            <td>Мастер-класс по цифровой живописи</td>
+                            <td>15:00</td>
+                            <td>Образовательный центр</td>
+                        </tr>
+                        <tr>
+                            <td>2 апреля</td>
+                            <td>Лекция: "Искусство и технологии"</td>
+                            <td>19:00</td>
+                            <td>Конференц-зал</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта - семантический тег HTML5 -->
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    
+                    <!-- Адрес -->
+                    <address>
+                        <p>г. Москва, ул. Современного искусства, 15</p>
+                        <p>Телефон: +7 (495) 123-45-67</p>
+                        <p>Email: info@modernartmuseum.ru</p>
+                    </address>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Часы работы</h3>
+                    
+                    <!-- Маркированный список -->
+                    <ul>
+                        <li>Пн: выходной</li>
+                        <li>Вт-Вс: 11:00 - 20:00</li>
+                        <li>Чт: 11:00 - 21:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Блок копирайт -->
+            <div class="copyright">
+                <p>&copy; 2023 Музей современного искусства. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

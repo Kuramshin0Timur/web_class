@@ -1,0 +1,349 @@
+/* Добавляем к предыдущему CSS */
+
+/* Стили для активной ссылки в навигации */
+.main-nav a.active {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Стили для заголовка страницы */
+.page-header {
+    background-color: #34495e;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.page-header h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Стили для страницы "О музее" */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.history, .mission {
+    grid-column: 1 / -1;
+}
+
+.museum-stats {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    grid-column: 1 / -1;
+}
+
+.stats-table {
+    width: 100%;
+}
+
+.stats-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.stats-table td:first-child {
+    width: 70%;
+}
+
+.stats-table td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.team-member h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    margin-bottom: 0.5rem;
+}
+
+/* Стили для страницы "Экспозиции" */
+.exhibition-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #3498db;
+    background: white;
+    color: #3498db;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #3498db;
+    color: white;
+}
+
+.exhibitions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.exhibition-large {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.exhibition-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.exhibition-large img,
+.exhibition-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.exhibition-item img {
+    height: 250px;
+}
+
+.exhibition-info {
+    padding: 1.5rem;
+}
+
+.exhibition-type {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.exhibition-type.permanent {
+    background: #27ae60;
+    color: white;
+}
+
+.exhibition-type.current {
+    background: #3498db;
+    color: white;
+}
+
+.exhibition-type.upcoming {
+    background: #f39c12;
+    color: white;
+}
+
+.location {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.exhibition-guide {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+.guide-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+/* Стили для страницы "События" */
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.calendar-table th,
+.calendar-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.calendar-table th {
+    background: #2c3e50;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-table tr:hover {
+    background: #f8f9fa;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-small:hover {
+    background: #2980b9;
+}
+
+.featured-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.featured-event {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.event-media {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-media video,
+.event-media audio {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.audio-caption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.event-info {
+    padding: 1.5rem;
+}
+
+.event-date {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.event-details,
+.event-highlights {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.category-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.category-card h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.category-card ul {
+    margin-top: 1rem;
+}
+
+.category-card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.category-card li:before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .about-content,
+    .exhibition-large,
+    .exhibition-item,
+    .featured-event,
+    .guide-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .calendar-table {
+        font-size: 0.9rem;
+    }
+    
+    .calendar-table th,
+    .calendar-table td {
+        padding: 0.5rem;
+    }
+}
