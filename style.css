@@ -6,6 +6,10 @@
     border-bottom: 2px solid #3498db;
 }
 
+.main-nav {
+    background-color: rgb(225, 220, 210);
+    color: #27ae60;
+}
 /* Стили для заголовка страницы */
 .page-header {
     background-color: #34495e;
@@ -13,7 +17,10 @@
     padding: 3rem 0;
     text-align: center;
 }
-
+.site-header  ul {
+    background-color: #27ae60;
+    color: #27ae60;
+}
 .page-header h2 {
     color: white;
     margin-bottom: 1rem;
@@ -24,7 +31,6 @@
     opacity: 0.9;
 }
 
-/* Стили для страницы "О музее" */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -323,7 +329,7 @@
 
 .category-card li:before {
     content: "•";
-    color: #3498db;
+    color: #fa1313;
     position: absolute;
     left: 0;
 }
