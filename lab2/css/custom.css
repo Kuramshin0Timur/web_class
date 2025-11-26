@@ -1,0 +1,163 @@
+/* Custom CSS for Museum Website with Bootstrap */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* Custom button styles */
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* Navigation active state */
+.navbar-nav .nav-link.active {
+    color: #3498db !important;
+    font-weight: 600;
+}
+
+/* Table styles */
+.table-hover tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Custom spacing */
+.section-padding {
+    padding: 4rem 0;
+}
+
+/* Form styles */
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Footer styles */
+footer a:hover {
+    color: #3498db !important;
+}
+
+/* Responsive image styles */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom badge styles */
+.badge-custom {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Icon styles */
+.bi {
+    font-size: 1.2em;
+}
+
+/* Custom shadow utilities */
+.shadow-custom {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Border radius utilities */
+.rounded-custom {
+    border-radius: 15px;
+}
+
+/* Background utilities */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+}
+
+/* Text utilities */
+.text-primary-custom {
+    color: #3498db;
+}
+
+/* Map placeholder */
+.map-placeholder {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Event date styles */
+.event-date {
+    min-width: 80px;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .hero-section .card {
+        margin-top: 2rem;
+    }
+}
+
+/* Custom spacing for mobile */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar, .btn, footer {
+        display: none !important;
+    }
+    
+    .card {
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Accessibility improvements */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Loading states */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты музея современного искусства">
+    <title>Контакты | Музей современного искусства</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-palette-fill me-2"></i>
+                Музей Искусств
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О музее</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="exhibitions.html">Выставки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="collections.html">Коллекции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">События</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="h2">Контакты</h1>
+                    <p class="mb-0">Свяжитесь с нами</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Contact Information -->
+            <section class="mb-5">
+                <h2 class="mb-4">Контактная информация</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-geo-alt-fill display-4 text-primary mb-3"></i>
+                                <h5 class="card-title">Адрес</h5>
+                                <address class="card-text">
+                                    г. Москва, ул. Искусств, 15<br>
+                                    Метро: "Кропоткинская", "Парк культуры"
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-telephone-fill display-4 text-success mb-3"></i>
+                                <h5 class="card-title">Телефоны</h5>
+                                <p class="card-text">Справочная: +7 (495) 123-45-67</p>
+                                <p class="card-text">Экскурсионное бюро: +7 (495) 123-45-68</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-envelope-fill display-4 text-warning mb-3"></i>
+                                <h5 class="card-title">Электронная почта</h5>
+                                <p class="card-text">Общие вопросы: info@artmuseum.ru</p>
+                                <p class="card-text">Экскурсии: tours@artmuseum.ru</p>
+                                <p class="card-text">Пресс-служба: press@artmuseum.ru</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-clock-fill display-4 text-info mb-3"></i>
+                                <h5 class="card-title">Часы работы</h5>
+                                <p class="card-text">Пн-Пт: 10:00 - 18:00</p>
+                                <p class="card-text">Сб-Вс: 10:00 - 20:00</p>
+                                <p class="card-text small text-muted">Касса закрывается за 30 минут до закрытия</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form and Map -->
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <section>
+                        <h2 class="mb-4">Форма обратной связи</h2>
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Имя *</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, введите ваше имя.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Электронная почта *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, введите корректный email адрес.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="phone" class="form-label">Телефон</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Тема *</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="">Выберите тему</option>
+                                        <option value="general">Общий вопрос</option>
+                                        <option value="tours">Экскурсии</option>
+                                        <option value="events">Мероприятия</option>
+                                        <option value="partnership">Сотрудничество</option>
+                                        <option value="other">Другое</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, выберите тему сообщения.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Сообщение *</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, введите ваше сообщение.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">Отправить сообщение</button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+
+                <!-- Map and Additional Info -->
+                <div class="col-lg-4">
+                    <section class="mb-5">
+                        <h2 class="mb-4">Как нас найти</h2>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="map-placeholder bg-light rounded p-4 text-center mb-3">
+                                    <i class="bi bi-map display-1 text-muted"></i>
+                                    <p class="mt-2 mb-0">Карта: г. Москва, ул. Искусств, 15</p>
+                                </div>
+                                <div class="text-center">
+                                    <a href="#" class="btn btn-outline-primary">
+                                        <i class="bi bi-geo-alt me-2"></i>Построить маршрут
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="mb-4">Социальные сети</h2>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-grid gap-2">
+                                    <a href="#" class="btn btn-outline-primary">
+                                        <i class="bi bi-vk me-2"></i>ВКонтакте
+                                    </a>
+                                    <a href="#" class="btn btn-outline-info">
+                                        <i class="bi bi-telegram me-2"></i>Telegram
+                                    </a>
+                                    <a href="#" class="btn btn-outline-warning">
+                                        <i class="bi bi-instagram me-2"></i>Instagram
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <section class="mt-5">
+                <h2 class="text-center mb-5">Часто задаваемые вопросы</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Нужно ли бронировать билеты заранее?</h5>
+                                <p class="card-text">Бронирование билетов не обязательно, но рекомендуется для посещения популярных выставок и в выходные дни. Вы можете приобрести билеты онлайн на нашем сайте.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Предоставляются ли скидки для групп?</h5>
+                                <p class="card-text">Да, для групп от 10 человек предоставляется скидка 15%. Для школьных и студенческих групп действуют специальные тарифы.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Можно ли фотографировать в музее?</h5>
+                                <p class="card-text">Фотографирование без вспышки разрешено в постоянной экспозиции. На временных выставках могут действовать ограничения, о которых сообщается отдельно.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Есть ли в музее камера хранения?</h5>
+                                <p class="card-text">Да, бесплатная камера хранения доступна для посетителей. Также в музее есть гардероб.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Музей искусств</h5>
+                    <p>Современное искусство для всех</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Контакты</h5>
+                    <address class="mb-0">
+                        г. Москва, ул. Искусств, 15<br>
+                        Тел: +7 (495) 123-45-67<br>
+                        Email: info@artmuseum.ru
+                    </address>
+                </div>
+                <div class="col-md-4">
+                    <h5>Быстрые ссылки</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Главная</a></li>
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">О музее</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Музей современного искусства. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (только для компонентов) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
