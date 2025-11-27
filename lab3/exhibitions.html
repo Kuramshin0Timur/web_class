@@ -8,7 +8,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -59,8 +59,24 @@
     <main class="py-5">
         <div class="container">
             <section class="mb-5">
-                <h2 class="mb-4">Текущие выставки</h2>
-                <div class="row g-4">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 class="mb-4">Текущие выставки</h2>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="filter-section mb-4">
+                            <label for="exhibitionFilter" class="form-label">Фильтр по типу:</label>
+                            <select class="form-select" id="exhibitionFilter" onchange="filterExhibitions()">
+                                <option value="all">Все выставки</option>
+                                <option value="current">Текущие</option>
+                                <option value="upcoming">Будущие</option>
+                                <option value="past">Прошедшие</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 exhibition-category" data-category="current">
                     <div class="col-lg-6">
                         <div class="card h-100 shadow">
                             <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=Грани+современности" class="card-img-top" alt="Выставка Грани современности">
@@ -68,8 +84,22 @@
                                 <h5 class="card-title">Грани современности</h5>
                                 <p class="card-text text-muted">15 сентября - 30 ноября 2023</p>
                                 <p class="card-text">Масштабная выставка работ молодых художников, исследующих границы современного искусства. В экспозиции представлены живопись, скульптура и инсталляции.</p>
+                                <div class="exhibition-stats mb-3">
+                                    <span class="badge bg-primary me-2" onclick="showExhibitionStats(1)">
+                                        <i class="bi bi-eye"></i> 15K просмотров
+                                    </span>
+                                    <span class="badge bg-success me-2" onclick="showVisitorReviews(1)">
+                                        <i class="bi bi-chat"></i> 234 отзыва
+                                    </span>
+                                    <span class="badge bg-warning" onclick="showTicketAvailability(1)">
+                                        <i class="bi bi-ticket"></i> Билеты
+                                    </span>
+                                </div>
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <a href="#" class="btn btn-primary">Купить билет</a>
+                                    <a href="javascript:void(0)" onclick="buyTickets(1)" class="btn btn-primary">Купить билет</a>
+                                    <a href="javascript:void(0)" onclick="addToFavorites(1)" class="btn btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -81,8 +111,22 @@
                                 <h5 class="card-title">Цифровые миры</h5>
                                 <p class="card-text text-muted">1 октября - 15 декабря 2023</p>
                                 <p class="card-text">Интерактивная выставка, посвященная цифровому искусству. VR-инсталляции, генеративное искусство и immersive-проекты.</p>
+                                <div class="exhibition-stats mb-3">
+                                    <span class="badge bg-primary me-2" onclick="showExhibitionStats(2)">
+                                        <i class="bi bi-eye"></i> 22K просмотров
+                                    </span>
+                                    <span class="badge bg-success me-2" onclick="showVisitorReviews(2)">
+                                        <i class="bi bi-chat"></i> 187 отзывов
+                                    </span>
+                                    <span class="badge bg-warning" onclick="showTicketAvailability(2)">
+                                        <i class="bi bi-ticket"></i> Билеты
+                                    </span>
+                                </div>
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <a href="#" class="btn btn-primary">Купить билет</a>
+                                    <a href="javascript:void(0)" onclick="buyTickets(2)" class="btn btn-primary">Купить билет</a>
+                                    <a href="javascript:void(0)" onclick="addToFavorites(2)" class="btn btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +134,8 @@
                 </div>
             </section>
 
-            <section class="mb-5">
+            <!-- Будущие выставки -->
+            <section class="mb-5 exhibition-category" data-category="upcoming">
                 <h2 class="mb-4">Будущие выставки</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
@@ -101,6 +146,9 @@
                             <div class="card-body">
                                 <p class="card-text text-muted">10 января - 28 февраля 2024</p>
                                 <p class="card-text">Исследование современной абстрактной живописи через работы российских и зарубежных художников.</p>
+                                <button class="btn btn-outline-primary btn-sm" onclick="setReminder(3)">
+                                    <i class="bi bi-bell"></i> Напомнить
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -112,6 +160,9 @@
                             <div class="card-body">
                                 <p class="card-text text-muted">15 марта - 30 апреля 2024</p>
                                 <p class="card-text">Выставка, посвященная экологической проблематике в современном искусстве.</p>
+                                <button class="btn btn-outline-success btn-sm" onclick="setReminder(4)">
+                                    <i class="bi bi-bell"></i> Напомнить
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -123,21 +174,27 @@
                             <div class="card-body">
                                 <p class="card-text text-muted">1 июня - 31 июля 2024</p>
                                 <p class="card-text">Ретроспектива работ женщин-художников XX-XXI веков.</p>
+                                <button class="btn btn-outline-warning btn-sm" onclick="setReminder(5)">
+                                    <i class="bi bi-bell"></i> Напомнить
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section>
+            <!-- Прошедшие выставки -->
+            <section class="exhibition-category" data-category="past">
                 <h2 class="mb-4">Прошедшие выставки</h2>
                 <div class="table-responsive">
-                    <table class="table table-striped table-hover">
+                    <table class="table table-striped table-hover" id="pastExhibitionsTable">
                         <thead class="table-dark">
                             <tr>
                                 <th>Название</th>
                                 <th>Даты проведения</th>
                                 <th>Количество посетителей</th>
+                                <th>Рейтинг</th>
+                                <th>Действия</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -145,19 +202,79 @@
                                 <td>Искусство света</td>
                                 <td>15 мая - 30 августа 2023</td>
                                 <td>25,000</td>
+                                <td>
+                                    <div class="rating" onclick="showExhibitionRating(6)">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-half text-warning"></i>
+                                        <span class="ms-1">4.5</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-info" onclick="viewExhibitionArchive(6)">
+                                        <i class="bi bi-archive"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Современная графика</td>
                                 <td>1 марта - 30 апреля 2023</td>
                                 <td>18,500</td>
+                                <td>
+                                    <div class="rating" onclick="showExhibitionRating(7)">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star text-warning"></i>
+                                        <span class="ms-1">4.0</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-info" onclick="viewExhibitionArchive(7)">
+                                        <i class="bi bi-archive"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Новые имена</td>
                                 <td>10 января - 28 февраля 2023</td>
                                 <td>22,300</td>
+                                <td>
+                                    <div class="rating" onclick="showExhibitionRating(8)">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <span class="ms-1">5.0</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-info" onclick="viewExhibitionArchive(8)">
+                                        <i class="bi bi-archive"></i>
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </section>
+
+            <section class="mt-5">
+                <div class="card bg-dark text-white">
+                    <div class="card-body text-center py-5">
+                        <h3 class="card-title mb-4">Виртуальный тур по выставкам</h3>
+                        <p class="card-text mb-4">Посетите наши выставки онлайн с помощью интерактивного 3D тура</p>
+                        <button class="btn btn-light btn-lg me-3" onclick="startVirtualTour()">
+                            <i class="bi bi-play-circle"></i> Начать тур
+                        </button>
+                        <button class="btn btn-outline-light btn-lg" onclick="showTourInfo()">
+                            <i class="bi bi-info-circle"></i> Подробнее
+                        </button>
+                    </div>
                 </div>
             </section>
         </div>
@@ -194,6 +311,9 @@
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/exhibitions-interactive.js"></script>
 </body>
 </html>

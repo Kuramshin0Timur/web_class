@@ -8,8 +8,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -67,6 +66,40 @@
                         <p>За годы работы мы стали одним из ведущих культурных центров страны, представляя как работы признанных мастеров, так и молодых перспективных художников.</p>
                         <p>Наша коллекция насчитывает более 2000 произведений различных жанров: живопись, скульптура, инсталляции, цифровое искусство и многое другое. Мы гордимся тем, что предоставляем площадку для экспериментальных форм искусства и поддерживаем инновационные художественные практики.</p>
                         
+                        <section class="my-5">
+                            <h4 class="mb-4">История развития</h4>
+                            <div class="timeline">
+                                <div class="timeline-item" onclick="showTimelineDetail(2005)">
+                                    <div class="timeline-year">2005</div>
+                                    <div class="timeline-content">
+                                        <h6>Основание музея</h6>
+                                        <p>Открытие первой выставки современного искусства</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" onclick="showTimelineDetail(2010)">
+                                    <div class="timeline-year">2010</div>
+                                    <div class="timeline-content">
+                                        <h6>Расширение коллекции</h6>
+                                        <p>Пополнение фонда работами зарубежных художников</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" onclick="showTimelineDetail(2015)">
+                                    <div class="timeline-year">2015</div>
+                                    <div class="timeline-content">
+                                        <h6>Реконструкция</h6>
+                                        <p>Модернизация выставочных пространств</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" onclick="showTimelineDetail(2020)">
+                                    <div class="timeline-year">2020</div>
+                                    <div class="timeline-content">
+                                        <h6>Цифровая трансформация</h6>
+                                        <p>Запуск виртуальных туров и онлайн-выставок</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
                         <h3 class="mt-5 mb-4">Наша миссия</h3>
                         <p>Миссия музея - сделать современное искусство доступным и понятным для самой широкой аудитории. Мы стремимся:</p>
                         <ul class="list-group list-group-flush mb-4">
@@ -76,14 +109,21 @@
                             <li class="list-group-item">Создавать пространство для диалога между художниками и зрителями</li>
                         </ul>
                         
+                        <section class="my-5">
+                            <h4 class="mb-4">Структура музея</h4>
+                            <div class="row g-3" id="departmentMap">
+                            </div>
+                        </section>
+                        
                         <h3 class="mt-5 mb-4">Наша команда</h3>
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-striped" id="teamTable">
                                 <thead class="table-dark">
                                     <tr>
                                         <th>Имя</th>
                                         <th>Должность</th>
                                         <th>Образование</th>
+                                        <th>Действия</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -91,21 +131,41 @@
                                         <td>Анна Петрова</td>
                                         <td>Директор музея</td>
                                         <td>МГУ, искусствоведение</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="showTeamMember('anna')">
+                                                <i class="bi bi-person"></i>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Иван Сидоров</td>
                                         <td>Главный куратор</td>
                                         <td>Санкт-Петербургский университет, культурология</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="showTeamMember('ivan')">
+                                                <i class="bi bi-person"></i>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Мария Козлова</td>
                                         <td>Хранитель коллекции</td>
                                         <td>РГГУ, музейное дело</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="showTeamMember('maria')">
+                                                <i class="bi bi-person"></i>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Сергей Волков</td>
                                         <td>Руководитель образовательных программ</td>
                                         <td>МГПУ, педагогика</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="showTeamMember('sergey')">
+                                                <i class="bi bi-person"></i>
+                                            </button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -127,7 +187,7 @@
                         </div>
                     </div>
                     
-                    <div class="card">
+                    <div class="card mb-4">
                         <div class="card-header bg-dark text-white">
                             <h5 class="mb-0">Статистика</h5>
                         </div>
@@ -138,6 +198,32 @@
                                 <li class="mb-2"><i class="bi bi-people text-primary me-2"></i>50+ мероприятий ежегодно</li>
                                 <li><i class="bi bi-person-check text-primary me-2"></i>100 000+ посетителей в год</li>
                             </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h5 class="mb-0">Видео о музее</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="video-container">
+                                <video id="museumVideo" controls class="w-100">
+                                    <source src="video/museum-tour.mp4" type="video/mp4">
+                                    Ваш браузер не поддерживает видео элемент.
+                                </video>
+                            </div>
+                            <div class="video-controls mt-2">
+                                <button class="btn btn-sm btn-outline-primary" onclick="playVideo()">
+                                    <i class="bi bi-play-fill"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary" onclick="pauseVideo()">
+                                    <i class="bi bi-pause-fill"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary" onclick="muteVideo()">
+                                    <i class="bi bi-volume-mute-fill"></i>
+                                </button>
+                                <span class="ms-2 small" id="videoTime">0:00 / 0:00</span>
+                            </div>
                         </div>
                     </div>
                 </aside>
@@ -177,5 +263,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/about-interactive.js"></script>
 </body>
 </html>

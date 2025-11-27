@@ -1,0 +1,79 @@
+<!-- Добавляем эту секцию в contact.html перед footer -->
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Форма обратной связи</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form id="contactForm" class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">Имя *</label>
+                            <input type="text" class="form-control" id="firstName" required minlength="2">
+                            <div class="invalid-feedback">
+                                Пожалуйста, введите ваше имя (минимум 2 символа).
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Фамилия</label>
+                            <input type="text" class="form-control" id="lastName">
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Пожалуйста, введите корректный email адрес.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="phone" class="form-label">Телефон</label>
+                            <input type="tel" class="form-control" id="phone" pattern="[\+]?[0-9\s\-\(\)]+">
+                            <div class="invalid-feedback">
+                                Пожалуйста, введите корректный номер телефона.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="subject" class="form-label">Тема обращения *</label>
+                            <select class="form-select" id="subject" required>
+                                <option value="">Выберите тему...</option>
+                                <option value="general">Общий вопрос</option>
+                                <option value="exhibition">Выставки</option>
+                                <option value="event">Мероприятия</option>
+                                <option value="collaboration">Сотрудничество</option>
+                                <option value="other">Другое</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Пожалуйста, выберите тему обращения.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="message" class="form-label">Сообщение *</label>
+                            <textarea class="form-control" id="message" rows="5" required minlength="10"></textarea>
+                            <div class="invalid-feedback">
+                                Пожалуйста, введите сообщение (минимум 10 символов).
+                            </div>
+                            <div class="form-text">
+                                Осталось символов: <span id="charCount">500</span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    Подписаться на рассылку новостей музея
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-lg">Отправить сообщение</button>
+                            <button type="reset" class="btn btn-outline-secondary btn-lg ms-2">Очистить форму</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Добавляем этот скрипт в конец contact.html -->
+<script src="js/form-validation.js"></script>

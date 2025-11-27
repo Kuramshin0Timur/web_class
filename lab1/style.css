@@ -1,6 +1,4 @@
-/* Добавляем к предыдущему CSS */
 
-/* Стили для активной ссылки в навигации */
 .main-nav a.active {
     color: #3498db;
     border-bottom: 2px solid #3498db;
@@ -10,7 +8,6 @@
     background-color: rgb(225, 220, 210);
     color: #27ae60;
 }
-/* Стили для заголовка страницы */
 .page-header {
     background-color: #34495e;
     color: white;
